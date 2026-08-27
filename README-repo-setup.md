@@ -1,6 +1,6 @@
 # Fiorebianco — Thesis repository setup
 
-This file explains how to organise the repository `github.com/alex542323/Fiorebianco` for the master's thesis, and how to push the drafts produced in the chat session to GitHub.
+This file explains how to organise the repository `github.com/alex542323/Fiorebianco` or 'github.com/capobiancoale/Pescerosso' for the master's thesis, and how to push the drafts produced in the chat session to GitHub.
 
 ---
 
