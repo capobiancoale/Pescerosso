@@ -1,6 +1,6 @@
 # Thesis progress tracker
 
-Last update: Section 5.4 (KPI design) recovered, reviewed, and uploaded to GitHub. Table 1 caption moved below the table per the formatting guidelines; one negative-parallelism sentence in `% Lode` smoothed for humanizer compliance.
+Last update: Section 5.6 (Data quality considerations) drafted, confirmed with the author, and pushed. Section 5.4.1 validation wording and Section 5.3 attribution updated for consistency. Budget overrun on 5.4 accepted (no trim). Wang and Strong (1996) added to the bibliography.
 
 ---
 
@@ -15,18 +15,18 @@ Last update: Section 5.4 (KPI design) recovered, reviewed, and uploaded to GitHu
 | 5.1 Overall approach | **Draft v1** | ~0.7 | `section-05-1-overall-approach.md` |
 | 5.2 Data architecture (medallion) | **Draft v1** | ~2.7 | `section-05-2-data-architecture.md` |
 | 5.3 Semantic model | **Draft v1** | ~4 | `section-05-3-semantic-model.md` |
-| 5.4 KPI design for student careers | **Draft v1 (OVER BUDGET)** | ~5–6 | `section-05-4-kpi-design.md` |
+| 5.4 KPI design for student careers | **Draft v1 (overrun accepted)** | ~5–6 | `section-05-4-kpi-design.md` |
 | 5.5 Power BI implementation | **Draft v1** | ~2 | `section-05-5-power-bi-implementation.md` |
-| 5.6 Data quality considerations | Not started | 1–2 | — |
+| 5.6 Data quality considerations | **Draft v1** | ~1.5–2 | `section-05-6-data-quality.md` |
 | 6. Discussion: before vs after | Not started | 3–4 | — |
 | 7. Skills acquired | Not started | 1–2 | — |
 | 8. Conclusions | Not started | 1–2 | — |
 
-**Drafted so far**: ~18–19 pages
+**Drafted so far**: ~20–21 pages
 **Target total**: 30–40 pages
 **Remaining budget**: ~11–22 pages across sections not yet started
 
-⚠️ **Budget note**: Section 5.4 runs ~5-6 pages against a 3-4 local target. Globally the thesis is at ~18-19 pages against a 30-40 target, so the real pressure is to reach 30, not to stay under 40. Recommendation on TO CONFIRM #19: accept the 5.4 overrun and keep the full catalogue (families 4-6 included); do not trim. Pending Alessio's confirmation.
+⚠️ **Budget note**: Section 5.4 runs ~5-6 pages against a 3-4 local target. Globally the thesis is at ~20-21 pages against a 30-40 target, so the real pressure is to reach 30, not to stay under 40. TO CONFIRM #19 resolved: the author accepted the 5.4 overrun and the full catalogue is kept (families 4-6 included). No trim.
 
 ---
 
@@ -50,16 +50,16 @@ Last update: Section 5.4 (KPI design) recovered, reviewed, and uploaded to GitHu
 
 ### Section 5.3 (Semantic model)
 11. UGOV: include as example of "other operational systems" or restrict student careers domain to ESSE3 only?
-12. Attribution of the wide fact table trade-off: emerged during **your** design work with team validation, or was it proposed by senior team and implemented by you?
+12. RESOLVED — the author worked mainly in the gold layer; §5.3 attribution now credits the author with the student careers gold tables plus the semantic model and DAX. The trade-off emerged in the author's own design work with team validation.
 13. Refresh cadence "target lag of one day" — verified against reality?
 14. "Client confirmed acceptable" about lack of filter sync — formally discussed with the client, or client simply didn't complain?
 
 ### Section 5.4 (KPI design)
 15. Selection process for KPIs — iterative with first list from academic management refined via review cycles? Or more top-down (KPMG proposed → client approved)?
 16. Thresholds 11% and 22% for the traffic-light attendance risk band — formal policy of the client or defined during the project with client validation?
-17. Validation via "manually reconstructed reference values" — is that how you actually validated?
+17. RESOLVED — validation was against client-provided reference values, reconciled directly with the client where they did not match (see §5.6.2). §5.4.1 wording updated.
 18. Display folders — I mention only `Iscrizione` and `Rendimento`. Are there other folders you use elsewhere?
-19. Page budget overrun in 5.4 (~5-6 pages vs 3-4 target). Options: (a) accept overrun and compensate in 5.5/5.6 (already partially compensated in 5.5), (b) shorten by removing 1-2 zoom sub-sections, (c) shorten by removing families 4-5-6 from Table 1. Preference?
+19. RESOLVED — the author accepted the overrun. Section 5.4 is kept in full, families 4-6 included.
 
 ### Section 5.5 (Power BI implementation) — NEW
 20. **Number of thematic reports** — how many reports in the app? From the .bim files I see at least didattica and servizi studenti; are there other reports (research output, economic-financial)?
@@ -73,11 +73,10 @@ Last update: Section 5.4 (KPI design) recovered, reviewed, and uploaded to GitHu
 
 ## Next steps (recommended order)
 
-1. **Answer TO CONFIRM items** — prioritise #5, #12, #15, #16, #19, #24 (authorship, key design choices, budget, technical accuracy of access model).
-2. **Section 5.6 (Data quality)** — quality issues encountered on ESSE3 data, how the medallion + semantic model addressed them, residual limitations. Will build on §5.3.4 and connect back to §4.3.
-3. **Section 6 (Discussion)** — natural once §5 is complete. Compares before/after using the four dimensions of §4.4. §5.5.4 already anticipates part of this.
-4. **Sections 2, 3, 7** — shorter sections about KPMG, objectives, skills.
-5. **Sections 1, 8** — introduction and conclusions written LAST.
+1. **Section 6 (Discussion: before vs after)** — NEXT. Section 5 is now complete (5.1–5.6). Compares before/after using the four dimensions of §4.4; §5.5.4 already anticipates part of this.
+2. **Clear remaining minor TO CONFIRM items** — the priority ones on authorship, key design choices, budget, and validation are resolved; what remains are minor wording confirmations (Section 4 role names, Section 5.2 batch time and ingestion tooling, Section 5.5 report and page names).
+3. **Sections 2, 3, 7** — shorter sections about KPMG, objectives, skills.
+4. **Sections 1, 8** — introduction and conclusions written LAST.
 
 ---
 
@@ -103,4 +102,5 @@ Last update: Section 5.4 (KPI design) recovered, reviewed, and uploaded to GitHu
 - `section-05-2-data-architecture.md`
 - `section-05-3-semantic-model.md`
 - `section-05-4-kpi-design.md`
-- `section-05-5-power-bi-implementation.md` ← NEW this session
+- `section-05-5-power-bi-implementation.md`
+- `section-05-6-data-quality.md` ← NEW this session

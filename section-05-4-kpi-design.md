@@ -4,7 +4,7 @@ The semantic model described in Section 5.3 exposes to the reporting layer the e
 
 ## 5.4.1 KPI design methodology and organisation
 
-The KPI catalogue was built iteratively during the internship, starting from a first list of information needs collected from academic management at Università Vita-Salute San Raffaele and refined over successive review cycles between the author, the KPMG delivery team, and the client. Each candidate KPI was defined by three attributes before being implemented as a DAX measure: the business question it answered, the grain at which it applied (for example, one row per student per academic year), and the analytical dimensions along which it needed to be sliced in the reports. Only after these three attributes were agreed with the client was the measure implemented in the semantic model and validated against manually reconstructed reference values.
+The KPI catalogue was built iteratively during the internship, starting from a first list of information needs collected from academic management at Università Vita-Salute San Raffaele and refined over successive review cycles between the author, the KPMG delivery team, and the client. Each candidate KPI was defined by three attributes before being implemented as a DAX measure: the business question it answered, the grain at which it applied (for example, one row per student per academic year), and the analytical dimensions along which it needed to be sliced in the reports. Only after these three attributes were agreed with the client was the measure implemented in the semantic model and validated against reference values supplied by the university. Where a measure did not reproduce the reference value, its definition was reconciled with the client, as described in Section 5.6.2.
 
 Two design choices at the level of the semantic model support the KPI catalogue as a whole.
 
@@ -86,5 +86,5 @@ Taken together, these patterns implement in the semantic model the governance pr
 
 1. Selection process for KPIs — I described it as "iteratively" with a "first list of information needs collected from academic management" refined through "review cycles between author, KPMG team, and client". Correct? Or was it more top-down (KPMG proposed → client approved)?
 2. Thresholds 11% and 22% for the traffic-light attendance risk band — do these come from a formal policy of the client (approved by academic authorities), or were they defined during the project with client validation?
-3. Validation against "manually reconstructed reference values" — is that how you actually validated the measures? Or was it more via comparison with previous reports, or another method?
+3. RESOLVED — validation was against reference values supplied by the university; where a measure did not match, the definition was reconciled directly with the client. Reflected in the text above and in Section 5.6.2.
 4. Display folders — I mention only `Iscrizione` and `Rendimento` (the two that appear in the model file). Are there any other folders that exist for other domains but that I don't see because I only have the didattica model?

@@ -29,6 +29,12 @@ Kimball, R. and Ross, M. (2013). *The Data Warehouse Toolkit: The Definitive Gui
 - **Used in**: §5.3.1 (design principles), §5.3.3 (star schema shape)
 - **Why it matters**: canonical reference for dimensional modelling; establishes the star schema and the fact/dimension terminology used throughout the semantic model chapter.
 
+### Data quality
+
+Wang, R. Y. and Strong, D. M. (1996). "Beyond accuracy: what data quality means to data consumers". *Journal of Management Information Systems*, 12(4): 5–33.
+- **Used in**: §5.6 (data quality dimensions: completeness and accuracy)
+- **Why it matters**: seminal framework of data quality dimensions grounded in what data consumers need; provides the completeness and accuracy vocabulary used to frame the data quality discussion.
+
 ---
 
 ## To be added later (placeholders)
@@ -36,5 +42,5 @@ Kimball, R. and Ross, M. (2013). *The Data Warehouse Toolkit: The Definitive Gui
 - Kimball on shared dimensions and conformed dimensions (may need dedicated chapter reference from the 2013 book)
 - Snowflake Dynamic Tables — if used, cite official Snowflake documentation with retrieval date
 - Databricks / medallion architecture original whitepaper or documentation (for §5.2 intro) — TO VERIFY
-- Additional references for §5.6 (data quality frameworks) — TO SEARCH when we get there
+- ~~Additional references for §5.6 (data quality frameworks)~~ — DONE: Wang and Strong (1996) added above.
 - Additional references for §6 (discussion) — likely needs one or two on higher-education analytics transformation
