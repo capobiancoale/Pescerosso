@@ -1,6 +1,6 @@
 # Thesis progress tracker
 
-Last update: Section 7 (skills acquired) drafted, confirmed, and pushed. Every body section is now drafted. What remains is Section 1 (introduction) and Section 8 (conclusions), written last, then assembly and formatting into the final document.
+Last update: Sections 1 (introduction) and 8 (conclusions) drafted, confirmed, and pushed. All thesis sections (1–8) are now drafted, about 34–35 pages. Next step: assembly and formatting into the final Word document (title page, abstract, table of contents, references), plus clearing the remaining minor TO CONFIRM items.
 
 ---
 
@@ -8,7 +8,7 @@ Last update: Section 7 (skills acquired) drafted, confirmed, and pushed. Every b
 
 | Section | Status | Estimated pages | File |
 |---|---|---|---|
-| 1. Introduction | Not started | 2–3 | — |
+| 1. Introduction | **Draft v1** | ~2 | `section-01-introduction.md` |
 | 2. Hosting company: KPMG | **Draft v1** | ~2 | `section-02-hosting-company.md` |
 | 3. Internship learning objectives | **Draft v1** | ~1.5 | `section-03-learning-objectives.md` |
 | 4. Problem definition | **Draft v1** | ~3.5 | `section-04-problem-definition.md` |
@@ -20,9 +20,9 @@ Last update: Section 7 (skills acquired) drafted, confirmed, and pushed. Every b
 | 5.6 Data quality considerations | **Draft v2 (UAT + real cases)** | ~3 | `section-05-6-data-quality.md` |
 | 6. Discussion: before vs after | **Draft v1** | ~3–4 | `section-06-discussion.md` |
 | 7. Skills acquired | **Draft v1** | ~1.5 | `section-07-skills-acquired.md` |
-| 8. Conclusions | Not started | 1–2 | — |
+| 8. Conclusions | **Draft v1** | ~1.5 | `section-08-conclusions.md` |
 
-**Drafted so far**: ~30–31 pages
+**Drafted so far**: ~34–35 pages (all sections 1–8)
 **Target total**: 30–40 pages
 **Remaining budget**: ~11–22 pages across sections not yet started
 
@@ -92,9 +92,9 @@ Last update: Section 7 (skills acquired) drafted, confirmed, and pushed. Every b
 
 ## Next steps (recommended order)
 
-1. **Section 1 (introduction)** and **Section 8 (conclusions)** — the last two, written now that the thesis is otherwise complete. Rich real material (Project Kaleidos context, phases, UAT) is available to ground the introduction.
+1. **Assemble and format the final document** — consolidate Sections 1–8 into one Word file with the required formatting (TNR 12 pt, 1.5 spacing, 2.5 cm margins, justified, A4, one-sided), and add the title page, abstract, table of contents, and reference list.
 2. **Clear remaining minor TO CONFIRM items** — mostly minor wording confirmations (Section 4 role names, Section 5.2 batch time and ingestion tooling, Section 5.5 report and page names, Section 6 maintainer of the pipeline, Sections 3 and 7 content).
-3. **Assemble and format** — consolidate all sections into the final Word document with the required formatting (TNR 12 pt, 1.5 spacing, 2.5 cm margins, justified, A4, one-sided), and add the title page, abstract, table of contents, and reference list.
+3. **Final formatting pass and proofread** before submission.
 
 ---
 
@@ -116,6 +116,7 @@ Last update: Section 7 (skills acquired) drafted, confirmed, and pushed. Every b
 - `progress.md` (this file)
 - `README-repo-setup.md` — how to push to GitHub
 - `references-bib.md` — running bibliography
+- `section-01-introduction.md`
 - `section-02-hosting-company.md`
 - `section-03-learning-objectives.md`
 - `section-04-problem-definition.md`
@@ -126,4 +127,5 @@ Last update: Section 7 (skills acquired) drafted, confirmed, and pushed. Every b
 - `section-05-5-power-bi-implementation.md`
 - `section-05-6-data-quality.md`
 - `section-06-discussion.md`
-- `section-07-skills-acquired.md` ← NEW this session
+- `section-07-skills-acquired.md`
+- `section-08-conclusions.md` ← NEW this session
