@@ -1,6 +1,6 @@
 # Thesis progress tracker
 
-Last update: Section 5.6 (Data quality considerations) drafted, confirmed with the author, and pushed. Section 5.4.1 validation wording and Section 5.3 attribution updated for consistency. Budget overrun on 5.4 accepted (no trim). Wang and Strong (1996) added to the bibliography.
+Last update: Section 6 (Discussion: before and after) drafted, confirmed with the author, and pushed. Section 5 is complete (5.1–5.6). The analytical core of the thesis is now drafted; what remains is Sections 2, 3, 7 and, last, 1 and 8.
 
 ---
 
@@ -18,11 +18,11 @@ Last update: Section 5.6 (Data quality considerations) drafted, confirmed with t
 | 5.4 KPI design for student careers | **Draft v1 (overrun accepted)** | ~5–6 | `section-05-4-kpi-design.md` |
 | 5.5 Power BI implementation | **Draft v1** | ~2 | `section-05-5-power-bi-implementation.md` |
 | 5.6 Data quality considerations | **Draft v1** | ~1.5–2 | `section-05-6-data-quality.md` |
-| 6. Discussion: before vs after | Not started | 3–4 | — |
+| 6. Discussion: before vs after | **Draft v1** | ~3–4 | `section-06-discussion.md` |
 | 7. Skills acquired | Not started | 1–2 | — |
 | 8. Conclusions | Not started | 1–2 | — |
 
-**Drafted so far**: ~20–21 pages
+**Drafted so far**: ~24–25 pages
 **Target total**: 30–40 pages
 **Remaining budget**: ~11–22 pages across sections not yet started
 
@@ -69,14 +69,18 @@ Last update: Section 5.6 (Data quality considerations) drafted, confirmed with t
 24. **Access rights mechanism** — I wrote "audience within the application" (standard for Power BI apps). Is that how it's actually configured, or via workspace roles / Azure AD groups / row-level security?
 25. **Slicers list** — I mention "academic year, cycle, gender" as examples. Real main slicers, or generalise?
 
+### Section 6 (Discussion) — NEW
+26. Before/after example scoped as "for the information the dashboards cover" rather than "everything automated". Framing OK?
+27. §6.4 maintainer of the pipeline and the semantic model after delivery — KPMG on an ongoing basis, an internal university IT/BI team, or a mix? Currently phrased generically as "whoever maintains them".
+28. §6.6 managerial implications — agree with the three points, in particular that the largest return is in recurring, shared, governance-heavy indicators?
+
 ---
 
 ## Next steps (recommended order)
 
-1. **Section 6 (Discussion: before vs after)** — NEXT. Section 5 is now complete (5.1–5.6). Compares before/after using the four dimensions of §4.4; §5.5.4 already anticipates part of this.
-2. **Clear remaining minor TO CONFIRM items** — the priority ones on authorship, key design choices, budget, and validation are resolved; what remains are minor wording confirmations (Section 4 role names, Section 5.2 batch time and ingestion tooling, Section 5.5 report and page names).
-3. **Sections 2, 3, 7** — shorter sections about KPMG, objectives, skills.
-4. **Sections 1, 8** — introduction and conclusions written LAST.
+1. **Sections 2 (KPMG), 3 (learning objectives), 7 (skills)** — NEXT. Shorter sections on the hosting company, the internship objectives, and the skills acquired.
+2. **Sections 1, 8** — introduction and conclusions, written LAST so they reflect the finished thesis.
+3. **Clear remaining minor TO CONFIRM items** — the priority ones are resolved; what remains are minor wording confirmations (Section 4 role names, Section 5.2 batch time and ingestion tooling, Section 5.5 report and page names, Section 6 maintainer of the pipeline).
 
 ---
 
@@ -103,4 +107,5 @@ Last update: Section 5.6 (Data quality considerations) drafted, confirmed with t
 - `section-05-3-semantic-model.md`
 - `section-05-4-kpi-design.md`
 - `section-05-5-power-bi-implementation.md`
-- `section-05-6-data-quality.md` ← NEW this session
+- `section-05-6-data-quality.md`
+- `section-06-discussion.md` ← NEW this session
