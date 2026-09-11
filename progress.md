@@ -1,6 +1,6 @@
 # Thesis progress tracker
 
-Last update: Section 5.5 completed.
+Last update: Section 5.4 (KPI design) recovered, reviewed, and uploaded to GitHub. Table 1 caption moved below the table per the formatting guidelines; one negative-parallelism sentence in `% Lode` smoothed for humanizer compliance.
 
 ---
 
@@ -26,7 +26,7 @@ Last update: Section 5.5 completed.
 **Target total**: 30–40 pages
 **Remaining budget**: ~11–22 pages across sections not yet started
 
-⚠️ **Budget note**: Section 5.4 is still over budget (~5-6 pages vs 3-4 target). Section 5.5 was kept compact (~2 pages) to partially compensate. Still need decision on TO CONFIRM #19 (whether to trim 5.4 or accept the overrun).
+⚠️ **Budget note**: Section 5.4 runs ~5-6 pages against a 3-4 local target. Globally the thesis is at ~18-19 pages against a 30-40 target, so the real pressure is to reach 30, not to stay under 40. Recommendation on TO CONFIRM #19: accept the 5.4 overrun and keep the full catalogue (families 4-6 included); do not trim. Pending Alessio's confirmation.
 
 ---
 
@@ -89,7 +89,7 @@ Last update: Section 5.5 completed.
 - **Humanizer skill**: applied automatically to every draft.
 - **Confidentiality**: names/paths/procedures/measure names in source materials are treated as already anonymised at source (per Alessio's explicit confirmation).
 - **Authorial honesty**: contribution boundaries between Alessio and the KPMG team are stated explicitly in the relevant sections.
-- **Persistence note**: I save each new section as a Markdown file and present it for download. I cannot push to GitHub directly (no write connector available in this chat). Alessio pushes manually from his own machine.
+- **Persistence note**: In this Claude Code session the assistant has write access to the GitHub repository `capobiancoale/Pescerosso` and pushes each confirmed file directly to the branch `claude/awesome-ride-pfilsf`. The earlier `Fiorebianco` / no-write-connector arrangement described in the master prompt does not apply in this environment.
 
 ---
 
