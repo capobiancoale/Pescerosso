@@ -1,6 +1,6 @@
 # Thesis progress tracker
 
-Last update: Section 3 (learning objectives) grounded in the real project phases and pushed, and Section 5.6 enriched to v2 with the two-level UAT and the deleted-careers case. Real project materials (Source-to-Target mapping, bronze-silver mapping, table descriptions, UAT, kick-off) provided by the author were used at the structural and process level. What remains is Section 7, then, last, 1 and 8.
+Last update: Section 7 (skills acquired) drafted, confirmed, and pushed. Every body section is now drafted. What remains is Section 1 (introduction) and Section 8 (conclusions), written last, then assembly and formatting into the final document.
 
 ---
 
@@ -19,10 +19,10 @@ Last update: Section 3 (learning objectives) grounded in the real project phases
 | 5.5 Power BI implementation | **Draft v1** | ~2 | `section-05-5-power-bi-implementation.md` |
 | 5.6 Data quality considerations | **Draft v2 (UAT + real cases)** | ~3 | `section-05-6-data-quality.md` |
 | 6. Discussion: before vs after | **Draft v1** | ~3–4 | `section-06-discussion.md` |
-| 7. Skills acquired | Not started | 1–2 | — |
+| 7. Skills acquired | **Draft v1** | ~1.5 | `section-07-skills-acquired.md` |
 | 8. Conclusions | Not started | 1–2 | — |
 
-**Drafted so far**: ~29–30 pages
+**Drafted so far**: ~30–31 pages
 **Target total**: 30–40 pages
 **Remaining budget**: ~11–22 pages across sections not yet started
 
@@ -84,13 +84,17 @@ Last update: Section 3 (learning objectives) grounded in the real project phases
 27. §6.4 maintainer of the pipeline and the semantic model after delivery — KPMG on an ongoing basis, an internal university IT/BI team, or a mix? Currently phrased generically as "whoever maintains them".
 28. §6.6 managerial implications — agree with the three points, in particular that the largest return is in recurring, shared, governance-heavy indicators?
 
+### Section 7 (Skills acquired) — NEW
+35. Skills content — do the technical/methodological/professional skills match what you feel you acquired? Add, remove, or reword.
+36. Specific tool, feature, or certification to name (e.g. Git, Snowflake Dynamic Tables/Streams/Tasks, dbt, a Snowflake or Power BI certification, workshop facilitation)?
+
 ---
 
 ## Next steps (recommended order)
 
-1. **Section 7 (skills acquired)** — NEXT. Then the front and back matter.
-2. **Sections 1, 8** — introduction and conclusions, written LAST so they reflect the finished thesis. Rich real material now available (Project Kaleidos context, phases, UAT) to ground the introduction.
-3. **Clear remaining minor TO CONFIRM items** — mostly minor wording confirmations (Section 4 role names, Section 5.2 batch time and ingestion tooling, Section 5.5 report and page names, Section 6 maintainer of the pipeline, Section 3 objectives).
+1. **Section 1 (introduction)** and **Section 8 (conclusions)** — the last two, written now that the thesis is otherwise complete. Rich real material (Project Kaleidos context, phases, UAT) is available to ground the introduction.
+2. **Clear remaining minor TO CONFIRM items** — mostly minor wording confirmations (Section 4 role names, Section 5.2 batch time and ingestion tooling, Section 5.5 report and page names, Section 6 maintainer of the pipeline, Sections 3 and 7 content).
+3. **Assemble and format** — consolidate all sections into the final Word document with the required formatting (TNR 12 pt, 1.5 spacing, 2.5 cm margins, justified, A4, one-sided), and add the title page, abstract, table of contents, and reference list.
 
 ---
 
@@ -121,4 +125,5 @@ Last update: Section 3 (learning objectives) grounded in the real project phases
 - `section-05-4-kpi-design.md`
 - `section-05-5-power-bi-implementation.md`
 - `section-05-6-data-quality.md`
-- `section-06-discussion.md` ← NEW this session
+- `section-06-discussion.md`
+- `section-07-skills-acquired.md` ← NEW this session
