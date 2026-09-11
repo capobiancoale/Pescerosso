@@ -1,6 +1,6 @@
 # 5.4 KPI design for student careers
 
-The semantic model described in Section 5.3 exposes to the reporting layer the entities and the relationships of the student careers domain. The KPIs discussed in this section are the DAX measures defined on top of that model. They translate the operational questions of academic management into calculations that Power BI evaluates in the context of the filters selected by the user of the dashboard. The measures documented in this section were designed and implemented by the author together with the semantic model on which they operate, within the framework and the naming conventions defined by the KPMG delivery team.
+The semantic model described in Section 5.3 exposes to the reporting layer the entities and the relationships of the student careers domain. The KPIs discussed in this section are, for the most part, the DAX measures defined on top of that model, together with a small number of classifications computed in the gold layer and exposed through it. They translate the operational questions of academic management into calculations that Power BI evaluates in the context of the filters selected by the user of the dashboard. The measures documented in this section were designed and implemented by the author together with the semantic model on which they operate, within the framework and the naming conventions defined by the KPMG delivery team.
 
 ## 5.4.1 KPI design methodology and organisation
 
@@ -50,7 +50,7 @@ The full catalogue of KPIs implemented in the student careers semantic model is 
 
 ## 5.4.3 Design choices in representative KPIs
 
-Five KPIs from families 1, 2, and 3 are discussed in detail below. They were selected because they illustrate design choices representative of the catalogue as a whole: filter encapsulation, denominator alignment, use of relationships for cross-fact computations, delegation of categorical logic to dimensions, and encoding of business rules as measures.
+Five KPIs from families 1, 2, and 3 are discussed in detail below. They were selected because they illustrate design choices representative of the catalogue as a whole: filter encapsulation, denominator alignment, use of relationships for cross-fact computations, delegation of categorical logic to dimensions, and the encoding of business rules in the model.
 
 **Media Ponderata.** The weighted average of exam grades by credits is the standard summary of a student's academic performance in the Italian university system. Its DAX implementation uses `SUMX` to compute grade × credits at the row level of the booklet fact, then divides by `SUM` of credits. Three filters restrict the calculation to the exams that must contribute to the average: state of the activity equal to "S" (passed), no-media flag equal to false, and evaluation mode equal to "V" (numeric evaluation, as opposed to pass/fail). Each of the three filters removes a class of records that would otherwise inflate or deflate the average, and their omission is a common source of error when the same computation is done ad hoc against the operational system. Encapsulating the three filters inside the measure guarantees that every dashboard using `Media Ponderata` computes it consistently.
 
@@ -60,13 +60,43 @@ Five KPIs from families 1, 2, and 3 are discussed in detail below. They were sel
 
 **Studenti fuori corso.** The count of out-of-schedule students is defined as the count of rows in the enrolment dimension whose calculated column `Corso o fuori corso` is equal to "Fuori corso". The interesting design choice here is the delegation of the categorisation to a calculated column of the dimension rather than to the DAX measure itself. Keeping the categorisation in the dimension has two effects: the same categorisation is available to any measure or visual that uses the enrolment dimension, without redefining the logic; and if the definition of "fuori corso" needs to be revised in the future, the revision happens in one place. The reciprocal measure `Studenti In corso` follows the same pattern with the opposite filter value.
 
-**Fascia Studente CdS.** The student risk band per programme is the most complex measure of the catalogue, and the one that best illustrates the value of a governed semantic model for management reporting. It is defined directly on the presenze fact table, in accordance with the hybrid approach described in Section 5.4.1: its logic is tightly coupled to the attendance data and its grain matches that of the fact. Its purpose is to classify each student, within a given study programme and academic year, into one of three risk bands (labelled with a green, yellow, or red traffic-light convention) based on the student's absence rate: below 11%, between 11% and 22%, and above 22%. The measure is defined at the grain of student × study programme × academic year, and it computes for each such triple the ratio between total absences and total lectures, then assigns the band using a `SWITCH` expression on the ratio. Three design choices are worth commenting.
+**Fascia Studente CdS.** The student risk band is the most elaborate rule of the catalogue, and the one that best shows the value of pushing a business rule into the governed layer. It is not a DAX measure but a categorical attribute computed in the gold Dynamic Table `TFCT_PRST_PRESENZE_STUDENTE`, at the grain of one row per student per didactic activity per study programme per academic year, and exposed to the semantic model as a column. For each row it takes the ratio between the student's absences and the maximum programmed hours of the activity and assigns one of four bands: green up to 11%, yellow up to 22%, red up to 33%, and black above 33%. When the data is not sufficient for the classification to mean anything, the row is labelled "N/D" rather than forced into a band; this happens when the student has two recorded lectures or fewer, or when the maximum programmed hours of the activity are missing or zero. The same logic is computed a second time at the coarser grain of the study programme, where the absences are compared against an absence budget aggregated across the activities of the programme, so that a report can show a band both per activity and per programme. Three design choices are worth commenting.
 
-The first is the explicit computation of the grain inside the measure. Because the calculation must be performed per student per programme per year regardless of the filter context, the measure uses variables (`VAR`) to capture the values of the three grain attributes at the current row and then applies a `CALCULATE` with an explicit `FILTER` that restricts the calculation to that same triple. This ensures that the categorisation of a student is stable across dashboard filters that change the visible level of aggregation.
+The first is that the rule lives in the gold layer rather than in a report. The thresholds of 11%, 22%, and 33%, the four band labels, and the related rules (a non-admission flag raised when the absence rate exceeds 33% for an activity with mandatory attendance, and a below-threshold flag raised when the presence rate falls under the required percentage) are computed once, in the definition of the fact table. Every report that shows a band reads the same value, and a change in the policy is applied by editing one table rather than several reports.
 
-The second is the encoding of a business rule as a data-model object. The thresholds of 11% and 22% and the traffic-light labels are policies of the academic management of the university, not of the reporting tool. Their inclusion in the measure means that every dashboard displaying a fascia value uses the same thresholds, and that a change in the policy (for example, a shift of the yellow-red threshold from 22% to 20%) is applied by editing one measure rather than by hunting for the definition across multiple reports.
+The second is the explicit handling of the denominator and of the missing dimension. The ratio is guarded so that a zero or missing number of hours produces an "N/D" label rather than an error or a misleading band, and a fact row whose study programme cannot be matched is attached to a ghost record rather than dropped. These are the safeguards described in Section 5.3.4, visible here in one definition.
 
-The third is the handling of the empty case. When a student has zero recorded lectures for a given programme and year, the ratio would be undefined and the traffic-light categorisation would be misleading. The measure returns the explicit label "N/D" in this case, which surfaces the incomplete data in the report rather than collapsing it into a colour band.
+The third is that the classification is stable across the filters of the dashboard. Because the band is materialised at a defined grain in the gold layer, its value for a given student, activity, programme, and year does not change when the user changes the level of aggregation shown on the page; the report aggregates or counts the pre-computed bands rather than recomputing them in a way that could depend on the visible context. Listing 1 shows a simplified extract of the rule, with the personal attributes of the student removed.
+
+```sql
+CREATE OR REPLACE DYNAMIC TABLE TFCT_PRST_PRESENZE_STUDENTE
+  TARGET_LAG = '1 day', WAREHOUSE = WH_ELT_XS_DEV, REFRESH_MODE = AUTO
+AS
+WITH stats_studente AS (            -- per student x activity x programme x year
+  SELECT PRES_ID_STU_ID, ELEN_ID_AD_ID, ELEN_ID_CDS_ID, ELEN_NR_AA_OFF_ID,
+         COUNT(*) AS NR_LEZIONI_TOTALI,
+         COUNT(CASE WHEN PRES_CD_PRESENZA = 'FALSE' THEN 1 END) AS NR_ASSENZE
+  FROM ...                          -- silver attendance joined to lecture context
+  GROUP BY 1, 2, 3, 4
+)
+SELECT
+  COALESCE(dcds.COST_HK, MD5_BINARY('GHOST_RECORD')) AS FK_COST_HK,
+  ROUND(st.NR_ASSENZE / NULLIF(st.NR_LEZIONI_TOTALI, 0), 4) AS PRST_PR_ASSENZE,
+  CASE
+    WHEN st.NR_LEZIONI_TOTALI <= 2
+      OR omax.ORE_MAX IS NULL OR omax.ORE_MAX = 0   THEN 'N/D'
+    WHEN st.NR_ASSENZE / omax.ORE_MAX <= 0.11        THEN 'VERDE'
+    WHEN st.NR_ASSENZE / omax.ORE_MAX <= 0.22        THEN 'GIALLO'
+    WHEN st.NR_ASSENZE / omax.ORE_MAX <= 0.33        THEN 'ROSSO'
+    ELSE 'NERO'
+  END AS PRST_CD_FASCIA_RISCHIO
+FROM stats_studente st
+LEFT JOIN dim_corso dcds ON dcds.COST_ID_CDS_ID = st.ELEN_ID_CDS_ID
+LEFT JOIN ore_max   omax ON omax.AD_GEN_ID = st.ELEN_ID_AD_ID
+                        AND omax.ADMO_NR_AA_OFF_ID = st.ELEN_NR_AA_OFF_ID;
+```
+
+**Listing 1** — *Simplified extract of the risk-band logic in the gold layer, with the student's personal attributes omitted.*
 
 ## 5.4.4 Design patterns across the catalogue
 
@@ -85,6 +115,6 @@ Taken together, these patterns implement in the semantic model the governance pr
 ## [TO CONFIRM] for this section
 
 1. Selection process for KPIs — I described it as "iteratively" with a "first list of information needs collected from academic management" refined through "review cycles between author, KPMG team, and client". Correct? Or was it more top-down (KPMG proposed → client approved)?
-2. Thresholds 11% and 22% for the traffic-light attendance risk band — do these come from a formal policy of the client (approved by academic authorities), or were they defined during the project with client validation?
+2. Thresholds 11%, 22% and 33% for the four-band attendance risk classification (verde/giallo/rosso/nero) — do these come from a formal policy of the client (approved by academic authorities), or were they defined during the project with client validation?
 3. RESOLVED — validation was against reference values supplied by the university; where a measure did not match, the definition was reconciled directly with the client. Reflected in the text above and in Section 5.6.2.
 4. Display folders — I mention only `Iscrizione` and `Rendimento` (the two that appear in the model file). Are there any other folders that exist for other domains but that I don't see because I only have the didattica model?

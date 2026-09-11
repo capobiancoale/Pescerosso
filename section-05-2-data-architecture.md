@@ -4,7 +4,9 @@ The data platform underlying the Business Intelligence solution is built on Snow
 
 ## 5.2.1 End-to-end flow
 
-The pipeline moves data from the ESSE3 Oracle database into the Snowflake analytical platform through three sequential phases: an extraction phase carried out on an on-premise virtual machine, a bronze loading phase orchestrated within Snowflake, and a silver refinement phase implemented through stored procedures. The three phases are chained by a signalling mechanism designed around a fail-fast principle: if any phase does not complete correctly, the subsequent phases do not start, and the analytical layer keeps the data of the previous day rather than exposing partially updated information. The end-to-end flow is illustrated in Figure X.
+The pipeline moves data from the ESSE3 Oracle database into the Snowflake analytical platform through three sequential phases: an extraction phase carried out on an on-premise virtual machine, a bronze loading phase orchestrated within Snowflake, and a silver refinement phase implemented through stored procedures. The three phases are chained by a signalling mechanism designed around a fail-fast principle: if any phase does not complete correctly, the subsequent phases do not start, and the analytical layer keeps the data of the previous day rather than exposing partially updated information. The end-to-end flow is illustrated in Figure 2.
+
+![Figure 2. The end-to-end nightly pipeline, from extraction on the on-premise virtual machine through the bronze, silver, and gold layers in Snowflake, with the fail-fast checkpoints.](figures/fig2_pipeline.png)
 
 ## 5.2.2 Extraction from ESSE3 to the Snowflake stage
 

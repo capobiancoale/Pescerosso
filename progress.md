@@ -1,6 +1,6 @@
 # Thesis progress tracker
 
-Last update: Sections 1 (introduction) and 8 (conclusions) drafted, confirmed, and pushed. All thesis sections (1–8) are now drafted, about 34–35 pages. Next step: assembly and formatting into the final Word document (title page, abstract, table of contents, references), plus clearing the remaining minor TO CONFIRM items.
+Last update: Section 5.4 corrected to the real four-band Fascia logic (verde/giallo/rosso/nero, thresholds 11/22/33) with a sanitised SQL Listing 1; Section 5.5 updated with the six real report names; four figures added (architecture and pipeline diagrams, plus the real Report_Didattica Home and Formazione dashboards, aggregate views only, personal-data pages excluded); the Word document was rebuilt with the figures embedded. All sections 1–8 are drafted and assembled.
 
 ---
 
@@ -15,8 +15,8 @@ Last update: Sections 1 (introduction) and 8 (conclusions) drafted, confirmed, a
 | 5.1 Overall approach | **Draft v1** | ~0.7 | `section-05-1-overall-approach.md` |
 | 5.2 Data architecture (medallion) | **Draft v1** | ~2.7 | `section-05-2-data-architecture.md` |
 | 5.3 Semantic model | **Draft v1** | ~4 | `section-05-3-semantic-model.md` |
-| 5.4 KPI design for student careers | **Draft v1 (overrun accepted)** | ~5–6 | `section-05-4-kpi-design.md` |
-| 5.5 Power BI implementation | **Draft v1** | ~2 | `section-05-5-power-bi-implementation.md` |
+| 5.4 KPI design for student careers | **Draft v2 (real Fascia + Listing 1)** | ~5–6 | `section-05-4-kpi-design.md` |
+| 5.5 Power BI implementation | **Draft v2 (real names + Figures 3-4)** | ~2.5 | `section-05-5-power-bi-implementation.md` |
 | 5.6 Data quality considerations | **Draft v2 (UAT + real cases)** | ~3 | `section-05-6-data-quality.md` |
 | 6. Discussion: before vs after | **Draft v1** | ~3–4 | `section-06-discussion.md` |
 | 7. Skills acquired | **Draft v1** | ~1.5 | `section-07-skills-acquired.md` |
@@ -66,14 +66,14 @@ Last update: Sections 1 (introduction) and 8 (conclusions) drafted, confirmed, a
 
 ### Section 5.4 (KPI design)
 15. Selection process for KPIs — iterative with first list from academic management refined via review cycles? Or more top-down (KPMG proposed → client approved)?
-16. Thresholds 11% and 22% for the traffic-light attendance risk band — formal policy of the client or defined during the project with client validation?
+16. Thresholds 11%, 22% and 33% for the four-band attendance risk classification (verde/giallo/rosso/nero) — formal policy of the client or defined during the project with client validation? (Fascia corrected to four bands from the real gold-layer code, with Listing 1.)
 17. RESOLVED — validation was against client-provided reference values, reconciled directly with the client where they did not match (see §5.6.2). §5.4.1 wording updated.
 18. Display folders — I mention only `Iscrizione` and `Rendimento`. Are there other folders you use elsewhere?
 19. RESOLVED — the author accepted the overrun. Section 5.4 is kept in full, families 4-6 included.
 
 ### Section 5.5 (Power BI implementation) — NEW
-20. **Number of thematic reports** — how many reports in the app? From the .bim files I see at least didattica and servizi studenti; are there other reports (research output, economic-financial)?
-21. **Report names** — do I use actual report names (like `Modello_Semantico_didattica`) or keep generic?
+20. RESOLVED — six reports: `Report_Didattica`, `Report_Servizi_Studenti`, `Report_Ammissioni`, `Report_Amministrazione_Finanza`, `Report_Accreditamento_Qualità`, `Report_Frequenze_Aule`.
+21. RESOLVED — the real report names are used in §5.5.
 22. **Page names** — do actual pages have specific titles I should mention?
 23. **Drill-down path** — I described institution → programme → cohort → student. Is that actually the navigation path?
 24. **Access rights mechanism** — I wrote "audience within the application" (standard for Power BI apps). Is that how it's actually configured, or via workspace roles / Azure AD groups / row-level security?
@@ -128,4 +128,6 @@ Last update: Sections 1 (introduction) and 8 (conclusions) drafted, confirmed, a
 - `section-05-6-data-quality.md`
 - `section-06-discussion.md`
 - `section-07-skills-acquired.md`
-- `section-08-conclusions.md` ← NEW this session
+- `section-08-conclusions.md`
+- `figures/` — fig1 architecture, fig2 pipeline (drawn); fig3 Report_Didattica Home, fig4 Report_Didattica Formazione (real, aggregate)
+- `Capobianco_Thesis_v1.docx` — assembled Word document (front matter, sections 1–8, figures, references)

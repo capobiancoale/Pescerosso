@@ -4,12 +4,14 @@
 
 The research presented in this chapter is applied and design-oriented. It documents the design and implementation of the Business Intelligence solution developed for Università Vita-Salute San Raffaele, and analyses it against the pre-existing reporting model discussed in Chapter 4.
 
-The end-to-end architecture has four layers, illustrated in Figure X:
+The end-to-end architecture has four layers, illustrated in Figure 1:
 
 1. ESSE3 as the operational source system.
 2. A Snowflake data platform, organised according to the medallion pattern (bronze, silver, and gold layers), which ingests the data extracted from ESSE3 and progressively refines it.
 3. A semantic model built in Power BI on top of the gold layer, which defines the entities, relationships, and DAX measures that underlie the KPI catalogue.
 4. A set of Power BI dashboards published through Power BI Service and distributed to the client as a Power BI application, with access rights differentiated by user role.
+
+![Figure 1. End-to-end architecture of the solution, from the ESSE3 source system through the Snowflake medallion layers (bronze, silver, gold) to the Power BI semantic model and dashboards.](figures/fig1_architecture.png)
 
 Two clarifications on authorship are needed before the sections that follow. The semantic model and the DAX measures for the student careers domain were designed and implemented directly by the author, in collaboration with the KPMG delivery team; the team contributed to the overall architecture, to the design of the fact tables, and to the review of the modelling choices. The Snowflake medallion layers were built by the wider team, and the author's involvement in that part of the pipeline was limited to consuming the gold layer and to aligning with the team on the data structures it made available.
 
