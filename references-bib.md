@@ -35,6 +35,16 @@ Wang, R. Y. and Strong, D. M. (1996). "Beyond accuracy: what data quality means 
 - **Used in**: §5.6 (data quality dimensions: completeness and accuracy)
 - **Why it matters**: seminal framework of data quality dimensions grounded in what data consumers need; provides the completeness and accuracy vocabulary used to frame the data quality discussion.
 
+### Company sources (Section 2)
+
+KPMG International (2025). About KPMG. KPMG International Limited. https://kpmg.com/xx/en/home/about.html (accessed 11 September 2026).
+- **Used in**: §2.1 (global scale and service lines)
+- **Why it matters**: KPMG's own reporting on the size and structure of the global organisation; source for the figures on countries and territories and on headcount.
+
+KPMG in Italy (2026). KPMG in Italy. https://kpmg.com/it/it.html (accessed 11 September 2026).
+- **Used in**: §2.2 (Italian organisation and Advisory practice)
+- **Why it matters**: KPMG's own presentation of its Italian organisation; source for the figures on professionals, offices, and clients in Italy.
+
 ---
 
 ## To be added later (placeholders)

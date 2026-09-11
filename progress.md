@@ -1,6 +1,6 @@
 # Thesis progress tracker
 
-Last update: Section 6 (Discussion: before and after) drafted, confirmed with the author, and pushed. Section 5 is complete (5.1–5.6). The analytical core of the thesis is now drafted; what remains is Sections 2, 3, 7 and, last, 1 and 8.
+Last update: Section 2 (Hosting company: KPMG) drafted, confirmed with the author, and pushed. KPMG figures cited from KPMG's own public reporting (two company sources added to the bibliography). What remains is Sections 3 and 7, then, last, 1 and 8.
 
 ---
 
@@ -9,7 +9,7 @@ Last update: Section 6 (Discussion: before and after) drafted, confirmed with th
 | Section | Status | Estimated pages | File |
 |---|---|---|---|
 | 1. Introduction | Not started | 2–3 | — |
-| 2. Hosting company: KPMG | Not started | 2–3 | — |
+| 2. Hosting company: KPMG | **Draft v1** | ~2 | `section-02-hosting-company.md` |
 | 3. Internship learning objectives | Not started | 1–2 | — |
 | 4. Problem definition | **Draft v1** | ~3.5 | `section-04-problem-definition.md` |
 | 5.1 Overall approach | **Draft v1** | ~0.7 | `section-05-1-overall-approach.md` |
@@ -22,7 +22,7 @@ Last update: Section 6 (Discussion: before and after) drafted, confirmed with th
 | 7. Skills acquired | Not started | 1–2 | — |
 | 8. Conclusions | Not started | 1–2 | — |
 
-**Drafted so far**: ~24–25 pages
+**Drafted so far**: ~26–27 pages
 **Target total**: 30–40 pages
 **Remaining budget**: ~11–22 pages across sections not yet started
 
@@ -31,6 +31,12 @@ Last update: Section 6 (Discussion: before and after) drafted, confirmed with th
 ---
 
 ## Open [TO CONFIRM] items across all drafted sections
+
+### Section 2 (Hosting company: KPMG) — NEW
+29. KPMG figures (143 countries / 275,000 globally; ~5,000 professionals / ~25 offices / >6,000 clients in Italy) — keep, or drop for a purely qualitative overview?
+30. Role progression wording (internship of three months, extended by two, then converted into an apprenticeship) — correct?
+31. Naming KPMG Advisory S.p.A. (Milan) — keep, or generic ("KPMG Advisory in Italy")?
+32. Precise team or service-line name within Advisory, if the author wants one used (anonymised if needed). Not invented.
 
 ### Section 4 (Problem definition)
 1. San Raffaele as "Italian private university" — correct?
@@ -78,7 +84,7 @@ Last update: Section 6 (Discussion: before and after) drafted, confirmed with th
 
 ## Next steps (recommended order)
 
-1. **Sections 2 (KPMG), 3 (learning objectives), 7 (skills)** — NEXT. Shorter sections on the hosting company, the internship objectives, and the skills acquired.
+1. **Sections 3 (learning objectives), 7 (skills)** — NEXT. Shorter sections on the internship objectives and the skills acquired. Section 2 (KPMG) is drafted.
 2. **Sections 1, 8** — introduction and conclusions, written LAST so they reflect the finished thesis.
 3. **Clear remaining minor TO CONFIRM items** — the priority ones are resolved; what remains are minor wording confirmations (Section 4 role names, Section 5.2 batch time and ingestion tooling, Section 5.5 report and page names, Section 6 maintainer of the pipeline).
 
@@ -101,6 +107,7 @@ Last update: Section 6 (Discussion: before and after) drafted, confirmed with th
 - `progress.md` (this file)
 - `README-repo-setup.md` — how to push to GitHub
 - `references-bib.md` — running bibliography
+- `section-02-hosting-company.md`
 - `section-04-problem-definition.md`
 - `section-05-1-overall-approach.md`
 - `section-05-2-data-architecture.md`
