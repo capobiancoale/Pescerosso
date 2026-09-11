@@ -1,6 +1,6 @@
 # Thesis progress tracker
 
-Last update: Section 2 (Hosting company: KPMG) drafted, confirmed with the author, and pushed. KPMG figures cited from KPMG's own public reporting (two company sources added to the bibliography). What remains is Sections 3 and 7, then, last, 1 and 8.
+Last update: Section 3 (learning objectives) grounded in the real project phases and pushed, and Section 5.6 enriched to v2 with the two-level UAT and the deleted-careers case. Real project materials (Source-to-Target mapping, bronze-silver mapping, table descriptions, UAT, kick-off) provided by the author were used at the structural and process level. What remains is Section 7, then, last, 1 and 8.
 
 ---
 
@@ -10,19 +10,19 @@ Last update: Section 2 (Hosting company: KPMG) drafted, confirmed with the autho
 |---|---|---|---|
 | 1. Introduction | Not started | 2–3 | — |
 | 2. Hosting company: KPMG | **Draft v1** | ~2 | `section-02-hosting-company.md` |
-| 3. Internship learning objectives | Not started | 1–2 | — |
+| 3. Internship learning objectives | **Draft v1** | ~1.5 | `section-03-learning-objectives.md` |
 | 4. Problem definition | **Draft v1** | ~3.5 | `section-04-problem-definition.md` |
 | 5.1 Overall approach | **Draft v1** | ~0.7 | `section-05-1-overall-approach.md` |
 | 5.2 Data architecture (medallion) | **Draft v1** | ~2.7 | `section-05-2-data-architecture.md` |
 | 5.3 Semantic model | **Draft v1** | ~4 | `section-05-3-semantic-model.md` |
 | 5.4 KPI design for student careers | **Draft v1 (overrun accepted)** | ~5–6 | `section-05-4-kpi-design.md` |
 | 5.5 Power BI implementation | **Draft v1** | ~2 | `section-05-5-power-bi-implementation.md` |
-| 5.6 Data quality considerations | **Draft v1** | ~1.5–2 | `section-05-6-data-quality.md` |
+| 5.6 Data quality considerations | **Draft v2 (UAT + real cases)** | ~3 | `section-05-6-data-quality.md` |
 | 6. Discussion: before vs after | **Draft v1** | ~3–4 | `section-06-discussion.md` |
 | 7. Skills acquired | Not started | 1–2 | — |
 | 8. Conclusions | Not started | 1–2 | — |
 
-**Drafted so far**: ~26–27 pages
+**Drafted so far**: ~29–30 pages
 **Target total**: 30–40 pages
 **Remaining budget**: ~11–22 pages across sections not yet started
 
@@ -37,6 +37,10 @@ Last update: Section 2 (Hosting company: KPMG) drafted, confirmed with the autho
 30. Role progression wording (internship of three months, extended by two, then converted into an apprenticeship) — correct?
 31. Naming KPMG Advisory S.p.A. (Milan) — keep, or generic ("KPMG Advisory in Italy")?
 32. Precise team or service-line name within Advisory, if the author wants one used (anonymised if needed). Not invented.
+
+### Section 3 (Internship learning objectives) — NEW
+33. Objectives content — do the reconstructed technical/methodological/professional/academic objectives match what the author set out to learn? Add, remove, or reword.
+34. Anything explicitly required at the start (a specific technology, a certification, a deliverable) to add as an objective.
 
 ### Section 4 (Problem definition)
 1. San Raffaele as "Italian private university" — correct?
@@ -84,9 +88,9 @@ Last update: Section 2 (Hosting company: KPMG) drafted, confirmed with the autho
 
 ## Next steps (recommended order)
 
-1. **Sections 3 (learning objectives), 7 (skills)** — NEXT. Shorter sections on the internship objectives and the skills acquired. Section 2 (KPMG) is drafted.
-2. **Sections 1, 8** — introduction and conclusions, written LAST so they reflect the finished thesis.
-3. **Clear remaining minor TO CONFIRM items** — the priority ones are resolved; what remains are minor wording confirmations (Section 4 role names, Section 5.2 batch time and ingestion tooling, Section 5.5 report and page names, Section 6 maintainer of the pipeline).
+1. **Section 7 (skills acquired)** — NEXT. Then the front and back matter.
+2. **Sections 1, 8** — introduction and conclusions, written LAST so they reflect the finished thesis. Rich real material now available (Project Kaleidos context, phases, UAT) to ground the introduction.
+3. **Clear remaining minor TO CONFIRM items** — mostly minor wording confirmations (Section 4 role names, Section 5.2 batch time and ingestion tooling, Section 5.5 report and page names, Section 6 maintainer of the pipeline, Section 3 objectives).
 
 ---
 
@@ -97,6 +101,7 @@ Last update: Section 2 (Hosting company: KPMG) drafted, confirmed with the autho
 - **Citations**: Bayesian Analysis journal convention. Author-year in-text (Kimball and Ross, 2013), full entries in `references-bib.md`.
 - **Humanizer skill**: applied automatically to every draft.
 - **Confidentiality**: names/paths/procedures/measure names in source materials are treated as already anonymised at source (per Alessio's explicit confirmation).
+- **Source materials (11 Sept 2026)**: the author provided real project artifacts (Source-to-Target mapping `STT`, bronze-silver mapping, table descriptions, UAT documentation, kick-off deck). The author and his KPMG manager cleared using project names and data. They are used at the structural and process level. Rules applied: individual student identifiers and personal records are not reproduced (aggregate figures only, e.g. the nine deleted careers); the KPMG team is named per the author's instruction; UniSR client individuals are referred to by role only; the kick-off deck is marked "KPMG Confidential", so contact details and internal confidential specifics are excluded.
 - **Authorial honesty**: contribution boundaries between Alessio and the KPMG team are stated explicitly in the relevant sections.
 - **Persistence note**: In this Claude Code session the assistant has write access to the GitHub repository `capobiancoale/Pescerosso` and pushes each confirmed file directly to the branch `claude/awesome-ride-pfilsf`. The earlier `Fiorebianco` / no-write-connector arrangement described in the master prompt does not apply in this environment.
 
@@ -108,6 +113,7 @@ Last update: Section 2 (Hosting company: KPMG) drafted, confirmed with the autho
 - `README-repo-setup.md` — how to push to GitHub
 - `references-bib.md` — running bibliography
 - `section-02-hosting-company.md`
+- `section-03-learning-objectives.md`
 - `section-04-problem-definition.md`
 - `section-05-1-overall-approach.md`
 - `section-05-2-data-architecture.md`
