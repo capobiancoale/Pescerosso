@@ -45,12 +45,29 @@ KPMG in Italy (2026). KPMG in Italy. https://kpmg.com/it/it.html (accessed 11 Se
 - **Used in**: §2.2 (Italian organisation and Advisory practice)
 - **Why it matters**: KPMG's own presentation of its Italian organisation; source for the figures on professionals, offices, and clients in Italy.
 
+### Technical documentation (added in the v2 revision, verified 14 October 2026)
+
+Databricks (2026). "What is the medallion lakehouse architecture?". *Databricks Documentation*. https://docs.databricks.com/aws/en/lakehouse/medallion (accessed 14 October 2026).
+- **Used in**: §5.2 (medallion pattern: bronze, silver, gold)
+
+Microsoft (2026a). "Model relationships in Power BI Desktop". *Microsoft Learn*. https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand (accessed 14 October 2026).
+- **Used in**: §5.3.3 (only one active filter path between two tables; ambiguous-path errors)
+
+Microsoft (2026b). "Understand star schema and the importance for Power BI". *Microsoft Learn*. https://learn.microsoft.com/en-us/power-bi/guidance/star-schema (accessed 14 October 2026).
+- **Used in**: §5.3.3 (star schema for semantic models; attributes kept on the fact table as an accepted exception)
+
+Snowflake (2026a). "Dynamic tables". *Snowflake Documentation*. https://docs.snowflake.com/en/user-guide/dynamic-tables-about (accessed 14 October 2026).
+- **Used in**: §5.3.2 (target lag)
+
+Snowflake (2026b). "Understanding & using Time Travel". *Snowflake Documentation*. https://docs.snowflake.com/en/user-guide/data-time-travel (accessed 14 October 2026).
+- **Used in**: §5.2.5 (global rollback by the finaliser)
+
 ---
 
 ## To be added later (placeholders)
 
 - Kimball on shared dimensions and conformed dimensions (may need dedicated chapter reference from the 2013 book)
-- Snowflake Dynamic Tables — if used, cite official Snowflake documentation with retrieval date
-- Databricks / medallion architecture original whitepaper or documentation (for §5.2 intro) — TO VERIFY
+- ~~Snowflake Dynamic Tables~~ — DONE in v2: Snowflake (2026a).
+- ~~Databricks / medallion architecture documentation~~ — DONE in v2: Databricks (2026).
 - ~~Additional references for §5.6 (data quality frameworks)~~ — DONE: Wang and Strong (1996) added above.
 - Additional references for §6 (discussion) — likely needs one or two on higher-education analytics transformation

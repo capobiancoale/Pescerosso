@@ -1,6 +1,6 @@
 # Thesis progress tracker
 
-Last update: Section 5.4 corrected to the real four-band Fascia logic (verde/giallo/rosso/nero, thresholds 11/22/33) with a sanitised SQL Listing 1; Section 5.5 updated with the six real report names; four figures added (architecture and pipeline diagrams, plus the real Report_Didattica Home and Formazione dashboards, aggregate views only, personal-data pages excluded); the Word document was rebuilt with the figures embedded. All sections 1–8 are drafted and assembled.
+Last update: v2 revision on branch `claude-revisionato` (14 Oct 2026). The external feedback on v1 was applied to the Word document: new research design section (5.1.1) and author contribution table (Table 1), rewritten abstract, research question consolidated in 4.4, synthesis tables 2, 3 and 5, Chapter 6 rewritten as interpretation (new 6.5 transferability), qualified conclusions, terminology pass, five verified documentation references. See `REVISIONE.md` for the point-by-point log and the three items to confirm. The Word document `Capobianco_Thesis_v2.docx` is now the reference version; the `section-*.md` drafts reflect v1.
 
 ---
 
@@ -131,3 +131,6 @@ Last update: Section 5.4 corrected to the real four-band Fascia logic (verde/gia
 - `section-08-conclusions.md`
 - `figures/` — fig1 architecture, fig2 pipeline (drawn); fig3 Report_Didattica Home, fig4 Report_Didattica Formazione (real, aggregate)
 - `Capobianco_Thesis_v1.docx` — assembled Word document (front matter, sections 1–8, figures, references)
+- `Capobianco_Thesis_v2.docx` — revised version after external feedback (reference version from now on)
+- `Capobianco_Thesis_v2_revisioni.docx` — v2 with every change against v1 shown as Word tracked changes
+- `REVISIONE.md` — point-by-point log of the v2 revision, in Italian
